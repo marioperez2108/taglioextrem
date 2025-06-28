@@ -1,39 +1,106 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barberia Vintage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <header>
-    <img src="images/logo.jpg" alt="Logo Taglio Extrem" class="logo" />
-    <h1>Taglio Extrem</h1>
-    <p>Stile classico, cura moderna</p>
-  </header>
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: 
+    linear-gradient(rgba(231, 217, 185, 0.85), rgba(203, 185, 148, 0.85)),
+    url('images/sonepar.jpg') center center/cover no-repeat fixed;
+  color: #312f2e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="servizi.html">Servizi</a>
-    <a href="galleria.html">Galleria</a>
-    <a href="contatti.html">Contatti</a>
-  </nav>
+header {
+  background-color: #7c5c3e;
+  color: #f7f3e9;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  border-bottom: 4px solid #bfa980;
+}
 
-  <main class="fade-in">
-    <section class="intro">
-      <h2>Benvenuti!</h2>
-      <p>Vuoi un taglio impeccabile,
-un look raffinato e un servizio professionale?
-Vieni a trovarci!
-Ogni dettaglio conta - dalla precisione delle forbici al tocco finale.</p>
-    </section>
-  </main>
+nav {
+  background-color: #bfa980;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #a1845c;
+}
 
-  <footer>
-    <p>2025 Taglio Extrem. Tutti i diritti riservati.</p>
-  </footer>
-</body>
-</html>
+nav a {
+  color: #4b3a2f;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #7c5c3e;
+}
+
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(247, 243, 233, 0.92);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(124, 92, 62, 0.08);
+}
+
+h2 {
+  color: #7c5c3e;
+  font-family: 'Playfair Display', serif;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery img {
+  width: 30%;
+  margin: 10px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(124, 92, 62, 0.13);
+  transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: smooth;
+  backface-visibility: hidden;
+  background: #f7f3e9;
+  border: 2px solid #bfa980;
+  filter: sepia(0.18) contrast(1.05) brightness(0.97);
+}
+
+.gallery img:hover {
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 12px 32px rgba(124, 92, 62, 0.18);
+}
+
+footer {
+  text-align: center;
+  background: #7c5c3e;
+  color: #f7f3e9;
+  padding: 16px 0 8px 0;
+  border-top: 4px solid #bfa980;
+  font-size: 0.95em;
+  letter-spacing: 1px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 10px auto;
+  max-width: 90px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(124, 92, 62, 0.18);
+  border: 3px solid #bfa980;
+  background: #fff8f0;
+}
